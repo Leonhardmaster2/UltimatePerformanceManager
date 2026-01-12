@@ -29,13 +29,19 @@ public class UPM : ModuleRules
 				"Slate",
 				"SlateCore",
 				"UMG",
-				"InputCore"
+				"InputCore",
+				"EnhancedInput",
+				"CommonUI",
+				"CommonInput",
+				"GameplayTags"
 			}
 		);
 
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
+				"ApplicationCore",
+				"DeveloperSettings"
 			}
 		);
 
@@ -44,5 +50,20 @@ public class UPM : ModuleRules
 			{
 			}
 		);
+
+		// NVIDIA DLSS support (optional - will compile without it)
+		if (Target.Type == TargetType.Editor || Target.Type == TargetType.Game)
+		{
+			// Check if DLSS plugin is available
+			// The module will handle missing plugin gracefully at runtime
+			PrivateDependencyModuleNames.AddRange(
+				new string[]
+				{
+					// "DLSS",           // Uncomment if DLSS plugin is available
+					// "DLSSBlueprint",  // Uncomment if DLSS Blueprint support is available
+					// "Streamline",     // Uncomment if Streamline plugin is available (for DLSS-G)
+				}
+			);
+		}
 	}
 }

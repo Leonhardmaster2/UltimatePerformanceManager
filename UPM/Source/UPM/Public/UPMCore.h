@@ -9,13 +9,15 @@
 
 class UUPMGraphicsManager;
 class UUPMPerformanceMonitor;
+class UUPMNvidiaManager;
 
 /**
  * UPMCore - Central access point for all UPM functionality
  *
  * This GameInstanceSubsystem provides global access to graphics settings,
- * performance monitoring, and serves as the coordination layer for all UPM systems.
- * It persists across level loads and is accessible globally via GetSubsystem.
+ * performance monitoring, NVIDIA features, and serves as the coordination
+ * layer for all UPM systems. It persists across level loads and is
+ * accessible globally via GetSubsystem.
  */
 UCLASS()
 class UPM_API UUPMCore : public UGameInstanceSubsystem
@@ -43,9 +45,13 @@ public:
 	UFUNCTION(BlueprintPure, Category = "UPM|Managers")
 	UUPMPerformanceMonitor* GetPerformanceMonitor() const { return PerformanceMonitor; }
 
+	/** Returns the NVIDIA manager instance for DLSS/Frame Gen/Reflex */
+	UFUNCTION(BlueprintPure, Category = "UPM|Managers")
+	UUPMNvidiaManager* GetNvidiaManager() const { return NvidiaManager; }
+
 	// ==================== GLOBAL OPERATIONS ====================
 
-	/** Applies all current settings (graphics + extended) */
+	/** Applies all current settings (graphics + extended + NVIDIA) */
 	UFUNCTION(BlueprintCallable, Category = "UPM")
 	void ApplyAllSettings();
 
@@ -64,6 +70,32 @@ public:
 	/** Loads all settings from disk */
 	UFUNCTION(BlueprintCallable, Category = "UPM")
 	void LoadAllSettings();
+
+	// ==================== NVIDIA QUICK ACCESS ====================
+
+	/** Check if NVIDIA DLSS is supported on this hardware */
+	UFUNCTION(BlueprintPure, Category = "UPM|NVIDIA")
+	bool IsDLSSSupported() const;
+
+	/** Check if Frame Generation is supported on this hardware */
+	UFUNCTION(BlueprintPure, Category = "UPM|NVIDIA")
+	bool IsFrameGenerationSupported() const;
+
+	/** Check if NVIDIA Reflex is supported on this hardware */
+	UFUNCTION(BlueprintPure, Category = "UPM|NVIDIA")
+	bool IsReflexSupported() const;
+
+	/** Set DLSS mode (quick access) */
+	UFUNCTION(BlueprintCallable, Category = "UPM|NVIDIA")
+	void SetDLSSMode(EUPMDLSSMode Mode);
+
+	/** Set Frame Generation mode (quick access) */
+	UFUNCTION(BlueprintCallable, Category = "UPM|NVIDIA")
+	void SetFrameGenerationMode(EUPMFrameGenMode Mode);
+
+	/** Set Reflex mode (quick access) */
+	UFUNCTION(BlueprintCallable, Category = "UPM|NVIDIA")
+	void SetReflexMode(EUPMReflexMode Mode);
 
 	// ==================== UNSAVED CHANGES TRACKING ====================
 
@@ -106,6 +138,10 @@ protected:
 	/** Performance monitoring system */
 	UPROPERTY()
 	TObjectPtr<UUPMPerformanceMonitor> PerformanceMonitor;
+
+	/** NVIDIA features manager */
+	UPROPERTY()
+	TObjectPtr<UUPMNvidiaManager> NvidiaManager;
 
 private:
 	/** Initialize all child managers */

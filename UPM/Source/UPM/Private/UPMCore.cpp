@@ -3,6 +3,7 @@
 #include "UPMCore.h"
 #include "UPMGraphicsManager.h"
 #include "UPMPerformanceMonitor.h"
+#include "UPMNvidiaManager.h"
 #include "UPMSaveLoad.h"
 #include "Engine/GameInstance.h"
 #include "Kismet/GameplayStatics.h"
@@ -62,6 +63,13 @@ void UUPMCore::InitializeManagers()
 	{
 		PerformanceMonitor->Initialize();
 	}
+
+	// Create NVIDIA Manager
+	NvidiaManager = NewObject<UUPMNvidiaManager>(this);
+	if (NvidiaManager)
+	{
+		NvidiaManager->Initialize();
+	}
 }
 
 void UUPMCore::ApplyAllSettings()
@@ -69,6 +77,11 @@ void UUPMCore::ApplyAllSettings()
 	if (GraphicsManager)
 	{
 		GraphicsManager->ApplySettings();
+	}
+
+	if (NvidiaManager)
+	{
+		NvidiaManager->ApplySettings();
 	}
 
 	OnSettingsApplied.Broadcast();
@@ -79,6 +92,11 @@ void UUPMCore::ResetToDefaults()
 	if (GraphicsManager)
 	{
 		GraphicsManager->ResetToDefaults();
+	}
+
+	if (NvidiaManager)
+	{
+		NvidiaManager->ResetToDefaults();
 	}
 
 	ApplyAllSettings();
@@ -104,6 +122,48 @@ void UUPMCore::LoadAllSettings()
 	UUPMSaveLoad::LoadAllSettings(this);
 	ApplyAllSettings();
 	bHasUnsavedChanges = false; // Loading resets the unsaved state
+}
+
+bool UUPMCore::IsDLSSSupported() const
+{
+	return NvidiaManager ? NvidiaManager->IsDLSSSupported() : false;
+}
+
+bool UUPMCore::IsFrameGenerationSupported() const
+{
+	return NvidiaManager ? NvidiaManager->IsFrameGenerationSupported() : false;
+}
+
+bool UUPMCore::IsReflexSupported() const
+{
+	return NvidiaManager ? NvidiaManager->IsReflexSupported() : false;
+}
+
+void UUPMCore::SetDLSSMode(EUPMDLSSMode Mode)
+{
+	if (NvidiaManager)
+	{
+		NvidiaManager->SetDLSSMode(Mode);
+		MarkSettingsChanged();
+	}
+}
+
+void UUPMCore::SetFrameGenerationMode(EUPMFrameGenMode Mode)
+{
+	if (NvidiaManager)
+	{
+		NvidiaManager->SetFrameGenerationMode(Mode);
+		MarkSettingsChanged();
+	}
+}
+
+void UUPMCore::SetReflexMode(EUPMReflexMode Mode)
+{
+	if (NvidiaManager)
+	{
+		NvidiaManager->SetReflexMode(Mode);
+		MarkSettingsChanged();
+	}
 }
 
 void UUPMCore::MarkSettingsChanged()
