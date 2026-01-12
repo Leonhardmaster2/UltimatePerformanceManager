@@ -1,8 +1,8 @@
 # UPM - Ultimate Performance Manager
 
-## Complete Documentation v1.0
+## Complete Documentation v1.1
 
-A comprehensive Unreal Engine 5.6+ plugin providing shipping-safe graphics settings, real-time performance monitoring, extended player settings, and menu-ready components for game settings menus.
+A comprehensive Unreal Engine 5.6+ plugin providing shipping-safe graphics settings, real-time performance monitoring, extended player settings, NVIDIA DLSS/Frame Generation integration, and complete menu-ready UI components including pause menus, save/load screens, and settings menus.
 
 ---
 
@@ -1086,7 +1086,231 @@ Benchmark recording results with recommendations.
 
 ---
 
+## 16. UI Widget System
+
+UPM provides a complete set of production-ready UI widgets built on CommonUI for proper controller/keyboard navigation.
+
+### 16.1 Available Widgets
+
+| Widget | Description |
+|--------|-------------|
+| `UUPMMainMenuWidget` | Main menu with customizable buttons, background, and music |
+| `UUPMPauseMenuWidget` | In-game pause menu with resume, settings, save/load, and quit |
+| `UUPMSettingsMenuWidget` | Full settings menu with categorized tabs |
+| `UUPMLoadingScreenWidget` | Loading screen with progress bar and tips |
+| `UUPMSavingIndicatorWidget` | Save progress indicator with spinner/progress |
+| `UUPMConfirmationDialogWidget` | Modal confirmation dialogs |
+| `UUPMPerformanceHUDWidget` | Real-time performance overlay |
+| `UUPMSaveSlotWidget` | Save/Load game slot selection |
+
+### 16.2 Pause Menu Widget
+
+The pause menu provides complete in-game pause functionality:
+
+**Features:**
+- Customizable button layout
+- Background blur/darken effects
+- Main menu navigation with confirmation
+- Save/Load game integration
+- Restart level/checkpoint options
+- Fully themeable
+
+**Configuration:**
+```cpp
+// Create pause menu config data asset
+UUPMPauseMenuConfig* Config = NewObject<UUPMPauseMenuConfig>();
+Config->MenuTitle = FText::FromString("PAUSED");
+Config->bBlurBackground = true;
+Config->BackgroundBlurStrength = 10.0f;
+Config->bConfirmMainMenu = true;
+Config->MainMenuLevelName = FName("MainMenu");
+
+// Add buttons
+FUPMPauseButtonConfig ResumeBtn;
+ResumeBtn.ButtonText = FText::FromString("Resume");
+ResumeBtn.Action = EUPMPauseMenuAction::Resume;
+Config->MenuButtons.Add(ResumeBtn);
+```
+
+**Available Actions:**
+- `Resume` - Continue gameplay
+- `Settings` - Open settings menu
+- `SaveGame` - Quick save
+- `LoadGame` - Open load menu
+- `MainMenu` - Return to main menu
+- `RestartCheckpoint` - Restart from checkpoint
+- `RestartLevel` - Restart current level
+- `Photo` - Enter photo mode
+- `Quit` - Quit game
+- `Custom` - Custom action via delegate
+
+### 16.3 Saving Indicator Widget
+
+Visual feedback during save operations:
+
+**Features:**
+- Multiple display styles (spinner, progress bar, icon)
+- Auto-hide after save completes
+- Success/failure states with sounds
+- Configurable screen position
+- Minimum display time enforcement
+
+**Usage:**
+```cpp
+// Show saving indicator
+SavingIndicator->ShowSaving(false); // false = not auto-save
+
+// Update progress
+SavingIndicator->UpdateProgress(0.5f); // 50%
+
+// Show success
+SavingIndicator->ShowSuccess();
+
+// Or show failure
+SavingIndicator->ShowFailure(FText::FromString("Disk Full!"));
+```
+
+**Configuration Options:**
+- `Style`: Spinner, ProgressBar, Icon, IconWithProgress
+- `Position`: TopLeft, TopRight, BottomLeft, BottomRight, Center
+- `MinimumDisplayTime`: Ensure indicator shows for minimum time
+- `SuccessDisplayDuration`: How long to show success state
+- `FailureDisplayDuration`: How long to show failure state
+
+### 16.4 Confirmation Dialog Widget
+
+Reusable modal dialogs:
+
+**Dialog Types:**
+- `YesNo` - Yes/No buttons
+- `YesNoCancel` - Yes/No/Cancel buttons
+- `OkCancel` - OK/Cancel buttons
+- `Ok` - Single OK button
+- `Custom` - Custom button labels
+
+**Icon Types:**
+- Question, Warning, Error, Info, Success, Custom
+
+**Usage:**
+```cpp
+// Simple confirmation
+ConfirmDialog->ShowDialog(
+    FText::FromString("Confirm"),
+    FText::FromString("Are you sure?"),
+    EUPMDialogType::YesNo
+);
+
+// With icon
+ConfirmDialog->ShowDialogWithIcon(
+    FText::FromString("Warning"),
+    FText::FromString("This action cannot be undone!"),
+    EUPMDialogType::OkCancel,
+    EUPMDialogIcon::Warning
+);
+
+// Handle result
+ConfirmDialog->OnDialogConfirmed.AddDynamic(this, &UMyWidget::OnConfirmed);
+ConfirmDialog->OnDialogCancelled.AddDynamic(this, &UMyWidget::OnCancelled);
+```
+
+### 16.5 Performance HUD Widget
+
+Real-time performance overlay:
+
+**Display Modes:**
+- `Disabled` - Hidden
+- `FPSOnly` - Just FPS counter
+- `Basic` - FPS + frame time
+- `Detailed` - + GPU, memory stats
+- `Full` - + min/max, percentiles
+
+**Features:**
+- Color-coded FPS (green/yellow/red based on thresholds)
+- Configurable update interval
+- Multiple screen positions
+- Customizable appearance
+
+**Usage:**
+```cpp
+// Set display mode
+PerformanceHUD->SetDisplayMode(EUPMHUDDisplayMode::Basic);
+
+// Cycle through modes
+PerformanceHUD->CycleDisplayMode();
+
+// Toggle visibility
+PerformanceHUD->ToggleVisibility();
+```
+
+### 16.6 Save Slot Widget
+
+Save/Load game interface:
+
+**Features:**
+- Save and Load modes
+- Thumbnail preview
+- Save metadata (date, playtime, level)
+- Overwrite/delete confirmation
+- Empty slot creation
+- Auto-save/quick-save filtering
+
+**Usage:**
+```cpp
+// Open for saving
+SaveSlotWidget->OpenForSave();
+
+// Open for loading
+SaveSlotWidget->OpenForLoad();
+
+// Handle events
+SaveSlotWidget->OnSaveComplete.AddDynamic(this, &UMyWidget::OnSaveComplete);
+SaveSlotWidget->OnLoadComplete.AddDynamic(this, &UMyWidget::OnLoadComplete);
+```
+
+### 16.7 Theming System
+
+All widgets support the `UUPMUIThemeData` data asset for consistent styling:
+
+```cpp
+UUPMUIThemeData* Theme = NewObject<UUPMUIThemeData>();
+Theme->ThemeName = "Dark";
+Theme->PrimaryColor = FLinearColor(0.2f, 0.4f, 0.8f, 1.0f);
+Theme->BackgroundBlur = 10.0f;
+Theme->FadeInDuration = 0.3f;
+
+// Apply to widgets
+PauseMenu->SetTheme(Theme);
+ConfirmDialog->SetTheme(Theme);
+```
+
+**Theme Properties:**
+- Colors: Primary, Secondary, Accent, Background, Panel
+- Button styles: Normal, Hovered, Pressed, Disabled, Selected
+- Text styles: Title, Header, Body, Button, Small
+- Slider/Toggle styling
+- Sound effects for all interactions
+- Animation timing
+
+---
+
 ## Version History
+
+### v1.1.0
+- **New UI Widgets:**
+  - UPMPauseMenuWidget - Complete in-game pause menu
+  - UPMSavingIndicatorWidget - Save progress feedback
+  - UPMConfirmationDialogWidget - Modal confirmation dialogs
+  - UPMPerformanceHUDWidget - Real-time performance overlay
+  - UPMSaveSlotWidget - Save/Load game screen
+- **UE5.6 Optimizations:**
+  - C++20 standard support
+  - IWYU enforcement for faster compilation
+  - Unity build support
+  - Platform-specific optimizations
+- **Configuration:**
+  - Data asset configs for all new widgets
+  - Centralized theming system
+  - CommonUI integration
 
 ### v1.0.0 (Initial Release)
 - Full graphics scalability support via UGameUserSettings

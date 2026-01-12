@@ -1,9 +1,9 @@
 {
 	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.0.0",
+	"Version": 2,
+	"VersionName": "1.1.0",
 	"FriendlyName": "UPM - Ultimate Performance Manager",
-	"Description": "A comprehensive shipping-safe graphics settings system, real-time performance monitoring, and menu-ready components for game settings menus.",
+	"Description": "A comprehensive shipping-safe graphics settings system, real-time performance monitoring, NVIDIA DLSS/Frame Generation integration, and complete menu-ready UI components including pause menu, save/load screens, and settings menus.",
 	"Category": "Performance",
 	"CreatedBy": "UPM Team",
 	"CreatedByURL": "",
@@ -14,11 +14,28 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"EngineVersion": "5.6",
+	"EnabledByDefault": true,
 	"Modules": [
 		{
 			"Name": "UPM",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		},
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
 		}
 	]
 }
