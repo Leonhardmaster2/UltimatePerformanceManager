@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\private\\upmsettingsdata.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\intermediate\\build\\win64\\x64\\statsysfinalenveditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\upm\\definitions.upm.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmsettingsdata.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\savegame.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\savegame.generated.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmtypes.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmtypes.generated.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmsettingsdata.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

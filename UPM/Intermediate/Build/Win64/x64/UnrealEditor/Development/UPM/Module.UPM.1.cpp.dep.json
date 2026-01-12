@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\upm\\module.upm.1.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\intermediate\\build\\win64\\x64\\statsysfinalenveditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\upm\\definitions.upm.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upm.init.gen.cpp",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmblueprintlibrary.gen.cpp",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmblueprintlibrary.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmtypes.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmtypes.generated.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmblueprintlibrary.generated.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmcore.gen.cpp",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmcore.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmcore.generated.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmextendedsettings.gen.cpp",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmextendedsettings.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealeditor\\inc\\upm\\uht\\upmextendedsettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

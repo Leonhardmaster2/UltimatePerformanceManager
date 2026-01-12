@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\private\\upmextendedsettings.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\intermediate\\build\\win64\\x64\\statsysfinalenv\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\upm\\definitions.upm.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmextendedsettings.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upmtypes.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealgame\\inc\\upm\\uht\\upmtypes.generated.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\unrealgame\\inc\\upm\\uht\\upmextendedsettings.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\postprocesscomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\postprocesscomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystatics.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\cameracomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

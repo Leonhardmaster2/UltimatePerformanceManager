@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UPM.1.cpp.obj": [
+			"UPM.init.gen.cpp.obj",
+			"UPMBlueprintLibrary.gen.cpp.obj",
+			"UPMCore.gen.cpp.obj",
+			"UPMExtendedSettings.gen.cpp.obj"
+		],
+		"Module.UPM.2.cpp.obj": [
+			"UPMGraphicsManager.gen.cpp.obj",
+			"UPMPerformanceMonitor.gen.cpp.obj",
+			"UPMSaveLoad.gen.cpp.obj",
+			"UPMSettingsData.gen.cpp.obj",
+			"UPMTypes.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"UPMBlueprintLibrary.cpp.obj"
+		]
+	}
+}

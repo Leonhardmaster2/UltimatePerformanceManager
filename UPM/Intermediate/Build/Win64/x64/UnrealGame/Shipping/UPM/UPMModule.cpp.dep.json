@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\private\\upmmodule.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\intermediate\\build\\win64\\x64\\statsysfinalenv\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\upm\\definitions.upm.h",
+            "c:\\users\\leonh\\documents\\unreal projects\\statsysfinalenv\\plugins\\upm\\source\\upm\\public\\upm.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

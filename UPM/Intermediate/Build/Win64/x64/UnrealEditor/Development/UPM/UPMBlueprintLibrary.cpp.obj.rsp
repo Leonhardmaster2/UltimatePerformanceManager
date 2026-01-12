@@ -1,0 +1,52 @@
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Source/UPM/Private/UPMBlueprintLibrary.cpp"
+@"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPM.Shared.rsp"
+/FI"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Intermediate/Build/Win64/x64/StatSysFinalEnvEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/Definitions.UPM.h"
+/Yu"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Intermediate/Build/Win64/x64/StatSysFinalEnvEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Intermediate/Build/Win64/x64/StatSysFinalEnvEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMBlueprintLibrary.cpp.obj"
+/experimental:log "C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMBlueprintLibrary.cpp.sarif"
+/sourceDependencies "C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMBlueprintLibrary.cpp.dep.json"
+/Zc:inline
+/nologo
+/Oi
+/FC
+/diagnostics:caret
+/c
+/Gw
+/Gy
+/utf-8
+/wd4819
+/DSAL_NO_ATTRIBUTE_DECLARATIONS=1
+/permissive-
+/Zc:strictStrings-
+/Zc:__cplusplus
+/D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
+/D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
+/D_WINDLL
+/D_DISABLE_EXTENDED_ALIGNED_STORAGE
+/Ob2
+/d2ExtendedWarningInfo
+/Ox
+/Ot
+/GF
+/errorReport:prompt
+/EHsc
+/DPLATFORM_EXCEPTIONS_DISABLED=0
+/Z7
+/MD
+/bigobj
+/fp:fast
+/Zo
+/Zp8
+/W4
+/we4456
+/we4458
+/we4459
+/wd4244
+/wd4838
+/TP
+/GR-
+/std:c++20
+/Zc:preprocessor
+/wd5054

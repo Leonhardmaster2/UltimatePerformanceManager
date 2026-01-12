@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "UPM - Ultimate Performance Manager",
+	"Description": "A comprehensive shipping-safe graphics settings system, real-time performance monitoring, and menu-ready components for game settings menus.",
+	"Category": "Performance",
+	"CreatedBy": "UPM Team",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "UPM",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

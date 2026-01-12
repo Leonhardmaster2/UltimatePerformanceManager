@@ -1,0 +1,21 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-UPM.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Intermediate/Build/Win64/x64/StatSysFinalEnvEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/Module.UPM.1.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/Module.UPM.2.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMBlueprintLibrary.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMCore.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMExtendedSettings.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMGraphicsManager.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMModule.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMPerformanceMonitor.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMSaveLoad.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UPMSettingsData.cpp.obj"
+"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/Default.rc2.res"
+/OUT:"C:/Users/leonh/Documents/Unreal Projects/StatSysFinalEnv/Plugins/UPM/Intermediate/Build/Win64/x64/UnrealEditor/Development/UPM/UnrealEditor-UPM.lib"
